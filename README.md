@@ -14,3 +14,23 @@ Tools & Solutions to use:  GIT,Dockers,K8, AWS, DB, JENKINS, Terraform, Microser
 8)Once K8 Environment is up and running deploy the latest version of application into the K8 Cluster as PODS in a namespace – Use Jenkins + other available tools.
 9)Demo scaling up and down of application PODS.
 10)Demo your microservices application working via web URL.
+
+
+
+
+
+
+
+
+Execute 
+Step1: git clone https://github.com/puneethkp8334/SRS.git
+step2:cd SRS
+step3:docker-compose up --build 
+step4:check docker running  docker ps command
+  out put like this
+CONTAINER ID   IMAGE       COMMAND                  CREATED          STATUS          PORTS                                                    NAMES
+24242032ecbe   srs_app     "/bin/sh -c 'python …"   34 minutes ago   Up 38 seconds   0.0.0.0:5000->5000/tcp, :::5000->5000/tcp                srs_app_1
+5d9135b65e6d   mysql:5.7   "docker-entrypoint.s…"   4 days ago       Up 39 seconds   33060/tcp, 0.0.0.0:32000->3306/tcp, :::32000->3306/tcp   srs_db_1
+
+step 5:open postman and enter the url get(change ip to your ip address)
+       GET 3.111.23.173:5000/products
